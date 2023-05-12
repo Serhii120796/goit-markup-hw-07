@@ -40,6 +40,20 @@ img {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 body {
   background-color: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -50,9 +64,26 @@ body {
 }
 
 .container {
-  width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
+}
+
+@media screen and (min-width: 428px) {
+.container {width: 428px;
+margin: 0 auto;
+}
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1158px;
+    padding: 0 15px;
+  }
 }
 
 /* ==================================COMPONENTS=============================== */
@@ -108,8 +139,7 @@ body {
   transition: background-color 250ms var(--timing-function);
 }
 
-/* ==============================Button=================================== */
-.button {
+/* .button {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -133,23 +163,7 @@ body {
 .button:hover,
 .button:focus {
   background-color: var(--batton-background-accent);
-}
-
-/* ==============================/Button=================================== */
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+} */
 
 /* ==================================/COMPONENTS=============================== */
 
@@ -160,7 +174,7 @@ body {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-.page-header .container {
+/* .page-header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -169,11 +183,12 @@ body {
 .navigation {
   display: flex;
   align-items: center;
-}
+} */
 
 /* Logotype */
+
 .logotype {
-  margin-right: 76px;
+  /* margin-right: 76px; */
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -191,7 +206,17 @@ body {
   color: var(--secondary-text-color-theme-dark);
 }
 
-.menu {
+.mobile-menu-open {
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: #e7e9fc;
+ }
+ .icon-menu-hamburger {
+  fill: black;
+ }
+
+/* .menu {
   display: flex;
 }
 
@@ -214,7 +239,6 @@ body {
   color: var(--accent-color);
 }
 
-/* Акцент на посилання на активну сторінку */
 .menu .current {
   position: relative;
   color: var(--accent-color);
@@ -229,11 +253,11 @@ body {
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
-}
+} */
 
 /* Contacts */
 
-.address {
+/* .address {
   font-style: normal;
 }
 
@@ -253,19 +277,18 @@ body {
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
-}
+} */
 
 /* ==================================/HEADER=============================== */
 
 /* ====================================HERO================================ */
 
-.hero {
+/* .hero {
   background-color: var(--secondary-text-color-theme-light);
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/img-name.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* background-size: 1440px, auto; */
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
@@ -280,16 +303,16 @@ body {
   letter-spacing: 0.02em;
   margin: 0 auto 48px;
   max-width: 496px;
-}
+} */
 
 /* Backdrop */
-.backdrop {
+
+/* .backdrop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* z-index: ; */
   background-color: rgba(46, 47, 66, 0.4);
   opacity: 1;
   transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
@@ -299,11 +322,11 @@ body {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  /* opacity - приховує елемент , visibility - забирає з потоку. */
-}
+} */
 
 /* Modal window */
-.modal {
+
+/* .modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -352,11 +375,11 @@ body {
 .modal-close-btn:hover .close-icon,
 .modal-close-btn:focus .close-icon {
   fill: var(--primary-text-color-theme-dark);
-}
+} */
 
 /* Form */
 
-.form-title {
+/* .form-title {
   text-align: center;
   margin-bottom: 16px;
   font-weight: 500;
@@ -477,13 +500,13 @@ body {
 .checkbox-link {
   line-height: 1.33;
   color: var(--logo-color);
-}
+} */
 
 /* ====================================/HERO================================ */
 
 /* ================================OUR ADVANTAGES============================ */
 
-.advantage-title {
+/* .advantage-title {
   margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
@@ -517,25 +540,25 @@ body {
   background-color: var(--secondary-text-color-theme-dark);
   border-radius: 4px;
   margin-bottom: 8px;
-}
+} */
 
 /* ================================/OUR ADVANTAGES============================ */
 
 /* ===============================WHAT ARE WE DOING=========================== */
 
-.services .list {
+/* .services .list {
   display: flex;
 }
 
 .services .item:not(:last-child) {
   margin-right: 24px;
-}
+} */
 
 /* ==============================/WHAT ARE WE DOING=========================== */
 
 /* ====================================OUR TEAM=============================== */
 
-.team {
+/* .team {
   background-color: #f4f4fd;
 }
 
@@ -570,12 +593,12 @@ body {
 
 .social-list-icon {
   fill: var(--secondary-text-color-theme-dark);
-}
+} */
 
 /* ===================================/OUR TEAM=============================== */
 
 /* ==================================CUSTOMERS=============================== */
-.customers .list {
+/* .customers .list {
   display: flex;
   gap: 24px;
   justify-content: space-between;
@@ -604,13 +627,13 @@ body {
 
 .customers-icon {
   fill: currentColor;
-}
+} */
 
 /* ==================================/CUSTOMERS=============================== */
 
 /* =====================================FOOTER================================ */
 
-.page-footer {
+/* .page-footer {
   background-color: var(--secondary-text-color-theme-light);
   padding-top: 100px;
   padding-bottom: 100px;
@@ -721,7 +744,7 @@ body {
 .telegram-icon {
   fill: currentColor;
   flex-shrink: 0;
-}
+} */
 
 /* =====================================/FOOTER================================ */
 
