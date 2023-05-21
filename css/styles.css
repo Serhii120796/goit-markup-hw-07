@@ -1179,7 +1179,7 @@ body {
   flex-wrap: wrap;
   gap: 48px 24px;
 
-  @media only screen and (min-width: 768px) and (max-width: 1157px) {
+  @media only screen and (min-width: 768px) and (max-width: 1158px) {
     row-gap: 72px;
   }
 }
